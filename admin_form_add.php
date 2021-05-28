@@ -1,3 +1,4 @@
+<?php include('h.php');?>
 <form  name="admin" action="admin_form_add_db.php" method="POST" id="admin" class="form-horizontal">
           <div class="form-group">
             <div class="col-sm-3" align="right"> Username  </div>

@@ -11,8 +11,8 @@
       <div class="col-md-3">
         <?php include('menu_left.php');?>
     </div>
-    <div class="col-md-6">
-        <a href="admin.php?act=add" class="btn-info btn-sm">เพิ่ม</a>
+    <div class="col-md-9">
+        <a href="member.php?act=add" class="btn-info btn-sm">เพิ่ม</a>
         <p></p>
         <?php
             $act = $_GET['act'];
@@ -22,7 +22,7 @@
             include('admin_form_edit.php');
         }
             else {
-            include('admin_list.php');
+            include('member_list.php');
         }
         ?>
     </div>

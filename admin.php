@@ -11,7 +11,7 @@
       <div class="col-md-3">
         <?php include('menu_left.php');?>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-9">
         <a href="admin.php?act=add" class="btn-info btn-sm">เพิ่ม</a>
         <p></p>
         <?php

@@ -25,12 +25,12 @@ echo  ' <table class="table table-hover">';
     echo "<td>" .$row["p_id"] .  "</td> ";
     echo "<td>" .$row["type_name"] .  "</td> ";
     echo "<td>" .$row["p_name"] .  "</td> ";
-    echo "<td align=center>"."<img src='p_img/".$row[p_img]."' width='100'>"."</td>";
+    echo "<td align=center>"."<img src='p_img/".$row['p_img']."' width='100'>"."</td>";
     //แก้ไขข้อมูล
     echo "<td><a href='product.php?act=edit&ID=$row[0]' class='btn btn-warning btn-xs'>edit</a></td> ";
     
     //ลบข้อมูล
-    echo "<td><a href='product_form_del_db.php?ID=$row[0]' onclick=\"return confirm('Do you want to delete this record? !!!')\" class='btn btn-danger btn-xs'>del</a></td> ";
+    echo "<td><a href='product_del_db.php?ID=$row[0]' onclick=\"return confirm('Do you want to delete this record? !!!')\" class='btn btn-danger btn-xs'>del</a></td> ";
   echo "</tr>";
   }
 echo "</table>";

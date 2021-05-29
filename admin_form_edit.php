@@ -10,6 +10,7 @@ extract($row);
 <form  name="admin" action="admin_form_edit_db.php" method="POST" id="admin" class="form-horizontal">
 
        <input type="hidden" name="a_id" value="<?php echo $a_id; ?>">  
+         
           <div class="form-group">
             <div class="col-sm-3" align="right"> Username  </div>
             <div class="col-sm-10" align="left">

@@ -9,20 +9,21 @@
         <p></p>
     <div class="row">
       <div class="col-md-3">
+      สวัสดี คุณ <?php echo $name; ?>
         <?php include('menu_left.php');?>
     </div>
-    <div class="col-md-9">
-        <a href="admin.php?act=add" class="btn-info btn-sm">เพิ่ม</a>
+    <div class="col-md-6">
+        <a href="type.php?act=add" class="btn-info btn-sm">เพิ่ม</a>
         <p></p>
         <?php
             $act = $_GET['act'];
             if($act == 'add'){
-            include('admin_form_add.php');
+            include('type_form_add.php');
             }elseif ($act == 'edit') {
-            include('admin_form_edit.php');
+            include('type_form_edit.php');
         }
             else {
-            include('admin_list.php');
+            include('type_list.php');
         }
         ?>
     </div>

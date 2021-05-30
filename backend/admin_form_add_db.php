@@ -2,7 +2,7 @@
 include('condb.php');
 
 $a_user = $_POST['a_user'];
-$a_pass = $_POST['a_pass'];
+$a_pass = sha1($_POST['a_pass']);
 $a_name = $_POST['a_name'];
 
 $check = "

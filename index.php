@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <?php include('h.php');?>
-    <head>
-    <body>
-        <div class="container">
-        <?php include('navbar.php');?>
-        <p></p>
-    <div class="row">
-      <div class="col-md-3">
-        <!-- Left side column. contains the logo and sidebar -->
-        <?php include('menu_left.php');?>
-        <!-- Content Wrapper. Contains page content -->
-    </div>
-    </div>
-  </div>
-  </body>
+<?php session_start();?>
+<?php include('h.php');?>
+<body>
+  <div class="container">
+  <?php include('navbar2.php');?>
+    <img src="banner.png" class="img-fluid" alt="Responsive image">
+    </div>    
+
+</body>
 </html>

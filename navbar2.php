@@ -1,13 +1,39 @@
-<div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
-  </div>
-</div>
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                    <?php session_start(); 
+                   $user_id = $_SESSION['user_id'];
+                   $name = $_SESSION['a_name'];
+                      if($user_id==''){
+                        echo('<a href="#!"><button type="button" class="btn btn-outline-secondary">register</button></a> &nbsp;');
+                        echo('<a href="form_login.php"><button type="button" class="btn btn-outline-success" >login</button> </a>&nbsp;');
+                        }  
+                       else{
+                        echo(' <button class="btn btn-outline-dark" type="submit">');
+                        echo('<i class="bi-cart-fill me-1"></i>');
+                        echo('Cart');
+                        echo('<span class="badge bg-dark text-white ms-1 rounded-pill">0</span>');
+                        echo('</button>');
+                        echo('&nbsp;<a href="form_login.php"><button type="button" class="btn btn-outline-danger" >logout</button> </a>&nbsp;');
+                       }  
+                    ?>  
+                    </form>
+                </div>
+            </div>
+        </nav>

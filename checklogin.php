@@ -10,7 +10,12 @@ session_start();
                   WHERE  a_user='".$a_user."' 
                   AND  a_pass='".$a_pass."' ";
                   $result = mysqli_query($con,$sql);
-				
+              
+                  $sql2="SELECT * FROM tbl_member 
+                  WHERE  m_user='".$a_user."' 
+                  AND  m_pass='".$a_pass."' ";
+                  $result2 = mysqli_query($con,$sql2);
+
                   if(mysqli_num_rows($result)==1){
                       $row = mysqli_fetch_array($result);
 
@@ -22,7 +27,18 @@ session_start();
                         Header("Location: backend/index.php");
                       }
                
-                  }else{
+                  }elseif(mysqli_num_rows($result2)==1){
+                    $row = mysqli_fetch_array($result2);
+
+                    $_SESSION["user_id"] = $row["member_id"];
+                    $_SESSION["a_name"] = $row["m_name"];
+                   
+                    if($_SESSION["user_id"]!=''){ 
+
+                      Header("Location: index.php");
+                    }
+                  }
+                  else{
                     echo "<script>";
                         echo "alert(\" user หรือ  password ไม่ถูกต้อง\");"; 
                         echo "window.history.back()";

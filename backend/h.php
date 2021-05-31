@@ -1,12 +1,12 @@
 <?php session_start(); 
 include('condb.php');
- 
-  $user_id = $_SESSION['user_id'];
-  $name = $_SESSION['a_name'];
+$user_id = $_SESSION['user_id'];
+$name = $_SESSION['a_name'];
 
- 	if($user_id==''){
+if($user_id==''){
     Header("Location: ../logout.php");  
-  }  
+  }
+  
 ?>
 <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
